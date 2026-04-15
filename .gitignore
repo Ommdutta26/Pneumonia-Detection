@@ -1,0 +1,79 @@
+# Python
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+*.pyc.*
+
+# Virtual environments
+
+venv/
+env/
+ENV/
+.venv/
+roman/
+pneumonia/
+
+# Conda environments
+
+conda-meta/
+
+# Jupyter notebooks
+
+.ipynb_checkpoints/
+
+# Logs
+
+*.log
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# VS Code
+
+.vscode/
+
+# PyCharm
+
+.idea/
+
+# Streamlit
+
+.streamlit/secrets.toml
+
+# Large ML model files (optional)
+
+*.h5
+*.keras
+*.pt
+*.pth
+
+# Dataset folders
+
+data/
+dataset/
+datasets/
+
+# Temporary files
+
+*.tmp
+*.temp
+
+# Build files
+
+build/
+dist/
+*.egg-info/
+
+# Python packaging
+
+*.egg
+pip-wheel-metadata/
+
+# TensorFlow checkpoints
+
+checkpoints/
+*.ckpt
