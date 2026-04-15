@@ -68,13 +68,16 @@ def apply_gradcam(image):
     heatmap = cv2.resize(heatmap, (IMG_SIZE, IMG_SIZE))
     heatmap = np.uint8(255 * heatmap)
 
-    # apply color map
+    # convert to color map (3 channels)
     heatmap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
 
     # original image
-    original = np.array(image.resize((IMG_SIZE, IMG_SIZE)))
+    original = np.array(image.convert("RGB").resize((IMG_SIZE, IMG_SIZE)))
 
-    # overlay heatmap
+    # ensure same type
+    original = original.astype(np.uint8)
+
+    # overlay
     superimposed = cv2.addWeighted(original, 0.6, heatmap, 0.4, 0)
 
-    return superimposed.astype(np.uint8)
+    return superimposed
